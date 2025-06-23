@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+}
+.bunga-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: 0;
+  pointer-events: none;
+}
+.foto-samping {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+.foto-samping.kiri { left: 150px; }
+.foto-samping.kanan { right: 150px; }
+
+.bunga-sudut,
+.pojok {
+  position: fixed;
+  width: 130px;
+  opacity: 0.85;
+  z-index: 2;
+  pointer-events: none;
+}
+.bunga-sudut.kiri { top: 10px; left: 10px; }
+.bunga-sudut.kanan { bottom: 10px; right: 10px; }
+.pojok.atas-kanan { top: 10px; right: 10px; }
+.pojok.bawah-kiri { bottom: 10px; left: 10px; }
+
+.container {
+  max-width: 750px;
+  margin: auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+  z-index: 1;
+  position: relative;
+  animation: fadeIn 1s ease;
+}
+.hidden {
+  display: none;
+}
+.judul {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3em;
+  color: #e60073;
+  margin-bottom: 20px;
+}
+.teks-biasa {
+  font-size: 1.2em;
+  color: #99004d;
+  margin-bottom: 30px;
+}
+.btn {
+  background: linear-gradient(to right, #ff99cc, #ff66b2);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1.1em;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(255, 102, 160, 0.4);
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-back {
+  background: #fbe0ec;
+  color: #800040;
+  border: 2px solid #ffb6c1;
+}
+.foto-bucin {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 20px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.quote-box {
+  font-size: 1.3em;
+  color: #800040;
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeUp 0.5s ease-in-out;
+}
+
+/* Galeri */
+.galeri {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.galeri img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.galeri img:hover {
+  transform: scale(1.05);
+}
+
+/* Efek */
+.bunga-jatuh {
+  position: fixed;
+  top: -50px;
+  width: 30px;
+  height: 30px;
+  background: url('https://i.imgur.com/hIAU9GZ.png') no-repeat center;
+  background-size: contain;
+  z-index: 999;
+  animation: bungaAnimasi 5s linear forwards;
+  pointer-events: none;
+}
+
+.love-terbang {
+  position: fixed;
+  bottom: 0;
+  font-size: 2em;
+  animation: loveNaik 3s ease-out forwards;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+@keyframes bungaAnimasi {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes loveNaik {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-200px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Untuk Kamu 💌</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Hiasan dekorasi -->
+  <img src="4eae117789362af09f2714438946f9bf.jpg" class="bunga-background" alt="Bunga Background" />
+  <img src="WhatsApp Image 2025-02-27 at 01.40.52_7b0961d1.jpg" class="foto-samping kiri" alt="Foto Kamu" />
+  <img src="WhatsApp Image 2025-02-20 at 10.22.59_6bff4920.jpg" class="foto-samping kanan" alt="Foto Doi" />
+  <img src="4fedd62a0f26c21f758ed2958763e146.jpg" class="bunga-sudut kiri" alt="Bunga Kiri" />
+  <img src="9364b44e2aba6f9f73cd139e640f31f3.jpg" class="bunga-sudut kanan" alt="Bunga Kanan" />
+  <img src="e647672a374e5b03fc82782a24019833.jpg" class="pojok atas-kanan" alt="Hiasan Atas Kanan" />
+  <img src="2867663c62618a539d3878d231b32d78.jpg" class="pojok bawah-kiri" alt="Hiasan Bawah Kiri" />
+
+  <!-- Halaman Awal -->
+  <div class="container" id="halaman-awal">
+    <h1 class="judul">Hai Indah Cantik 🥰</h1>
+    <img src="WhatsApp Image 2025-02-20 at 10.23.00_c27590ae.jpg" alt="Foto Dalam" class="foto-bucin" />
+    <p class="teks-biasa">AAku mau ceritain Aku sama kamu baca ya semuanya aku buat sambil nangis juga😔 😭</p>
+    <button class="btn" onclick="mulaiBucin()">Lihat 💖</button>
+  </div>
+
+  <!-- Halaman Kata-Kata -->
+  <div class="container hidden" id="halaman-kata">
+    <img src="WhatsApp Image 2025-06-23 at 01.25.22_e1be3711.jpg" alt="Foto Dalam" class="foto-bucin" />
+    <div class="quote-box" id="kataTampil"></div>
+    <button class="btn" onclick="tampilkanKata()">Lanjut Kata-Kata 💌</button>
+    <button class="btn btn-back" onclick="kembali()">⬅ Balik Lagi 🥺</button>
+    <button class="btn" onclick="tampilkanGaleri()">📸 Lihat Galeri</button>
+    <audio id="laguCinta" loop>
+      <source src="Andmesh - Cinta Luar Biasa (1).mp3" type="audio/mp3" />
+    </audio>
+  </div>
+
+  <!-- Halaman Galeri -->
+  <div class="container hidden" id="halaman-galeri">
+    <h2 class="judul">Kenangan Kita 📸</h2>
+    <div class="galeri">
+      <!-- 20 Foto Galeri -->
+      <img src="WhatsApp Image 2025-02-20 at 10.22.56_70418c05.jpg" alt="Foto 1" />
+      <img src="WhatsApp Image 2025-02-20 at 10.22.57_4effb671.jpg" alt="Foto 2" />
+      <img src="WhatsApp Image 2025-02-20 at 10.22.59_6bff4920.jpg" alt="Foto 3" />
+      <img src="WhatsApp Image 2025-02-20 at 10.22.59_eff6aede.jpg" alt="Foto 4" />
+      <img src="WhatsApp Image 2025-02-20 at 10.23.00_c27590ae.jpg" alt="Foto 5" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.45_076694bd.jpg" alt="Foto 6" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.45_16dfb34f.jpg" alt="Foto 7" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.45_18e4cea3.jpg" alt="Foto 8" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.46_1aa21a33.jpg" alt="Foto 9" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.46_49e6ec10.jpg" alt="Foto 10" />  
+      <img src="WhatsApp Image 2025-02-27 at 01.40.49_1f089802.jpg" alt="Foto 11" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.50_ba2b899f.jpg" alt="Foto 12" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.52_7b0961d1.jpg" alt="Foto 13" />
+      <img src="WhatsApp Image 2025-06-23 at 01.25.22_e1be3711.jpg" alt="Foto 14" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.44_c71e29a3.jpg" alt="Foto 15" />
+      <img src="WhatsApp Image 2025-06-23 at 20.17.47_21412170.jpg" alt="Foto 16" />
+      <img src="WhatsApp Image 2025-06-23 at 20.17.48_40f819db.jpg" alt="Foto 17" />
+      <img src="WhatsApp Image 2025-02-27 at 01.40.46_49e6ec10.jpg" alt="Foto 18" />
+      <img src="WhatsApp Image 2025-06-23 at 20.17.48_a86f8282.jpg" alt="Foto 19" />
+      <img src="WhatsApp Image 2025-06-23 at 20.17.49_6abbe372.jpg" alt="Foto 20" />
+    </div>
+    <button class="btn btn-back" onclick="kembaliKeKata()">⬅ Balik ke Kata-Kata</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
